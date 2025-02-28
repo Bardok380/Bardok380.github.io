@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Raymond Clements</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/RCC-portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Scales">
+                <source src="stylesheet/images/video/Scales.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="lightslategray-text">Raymond Clements' Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.
+                    </q>
+                    <br> -Patrick McKenzie, software engineer
+                    <br>
+                    <br> My name is Raymond Clements. Welcome to my portfolio website. On it I will tell you about my background and experience.
+                    <br>
+                    <br>Thank you fo stopping by and enjoy! 
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="stylesheet/images/Cyber-Cityscape.jpg" alt="Cities of the Future">
+            </div>
+            <!--Right Column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am an eternal student who is learning how to code! Growing up as an only child, who is Neuro Divergent with ADHD, has led me to get a lot of hobbies from Cooking to Writing with many inbetween.
+                    <br>
+                    <br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s AI Development Boot Camp, I am being trained and gaining experience in the following web and programming languages: HTML, CSS, JavaScript, and more.
+                    <br>
+                    <br>When I am finished I will be a full-stack junior developer and would love the opportunity to learn more and work with you.
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub Section-->
+        <div class="Row" id="GitHub">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/Bardok380" target="_blank">Bardok380's (Raymond Clements') Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/Bardok380" target="_blank"> <img src="stylesheet/images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact Section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="stylesheet/images/Computer-Shell.jpg" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data-->
+                <form action="https://formspree.io/f/meoevpvj" method="POST"> <!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute-->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <p>
+                <p class="center"> &copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
