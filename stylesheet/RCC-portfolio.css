@@ -11,7 +11,7 @@ body{
     margin: 0%; /*This ensures our site displays all the way to the edge of the browser screen*/
     opacity: 1; /* This and transition affect the page loading fade in effect*/
     transition: 3s opacity; /*This causes a 3 second fade in*/
-    letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width*/
+    letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width.*/
     font-family: Avant Garde, Helvetica;
     font-size: 1.5vw;
     overflow-x: hidden; /*This prevents the horizontal scroll bar from appearing when the quote is hovered over*/
