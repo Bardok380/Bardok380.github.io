@@ -44,3 +44,117 @@ document.addEventListener("click", function(event){
         closeForm()
     }
 }, false )
+
+/* PROJECT CARD SCROLL ANIMATION */
+const projectCards = document.querySelectorAll(".Project_Card");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+});
+
+projectCards.forEach(card => {
+    observer.observe(card);
+});
+
+const sections = document.querySelectorAll("section, .Row, .Section_Reveal");
+const navLinks = document.querySelectorAll(".Navbar a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+
+        if(scrollY >= sectionTop){
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+            link.classList.add("active");
+        }
+    });
+
+});
+
+const revealSections = document.querySelectorAll(".Section_Reveal");
+
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+        }
+    });
+});
+
+revealSections.forEach(section => {
+    sectionObserver.observe(section);
+});
+
+const navbar = document.querySelector(".Navbar");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolling");
+    } else {
+        navbar.classList.remove("scrolling");
+    }
+});
+
+/* PARTICLE BACKGROUND */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height= window.innerHeight;
+
+const particles = [];
+
+for(let i = 0; i < 60; i++){
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        speedX: (Math.random() - 0.5) * 0.3,
+        speedY: (Math.random() - 0.5) * 0.3
+    });
+}
+
+function animateParticles(){
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p => {
+
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        if(p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if(p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.radius,0,Math.PI*2);
+        ctx.fillStyle = "rgba(150,200,255,0.4)";
+        ctx.fill();
+    });
+
+    requestAnimationFrame(animateParticles);
+}
+
+animateParticles();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});

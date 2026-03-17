@@ -18,6 +18,7 @@
             <!--New Section-->
             <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
+            <a href="#Projects">Projects</a>
             <a href="#GitHub">GitHub</a>
             <!--Onclick and ondblclick functions added to open and close the contact form,-->
             <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
@@ -25,11 +26,16 @@
        
         <!--Background video-->
         <div id="Home">
+
+            <!-- Particle Background -->
+            <canvas id="particles"></canvas>
+
             <video autoplay muted loop id="Scales">
                 <source src="stylesheet/images/video/Scales.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
             </video>
+            
         </div>
 
         <!--Video text-->
@@ -43,7 +49,7 @@
                     <br>
                     <br> My name is Raymond Clements. Welcome to my portfolio website. On it I will tell you about my background and experience.
                     <br>
-                    <br>Thank you fo stopping by and enjoy! 
+                    <br>Thank you for stopping by and enjoy! 
                 </p>
             </strong>
         </div>
@@ -101,7 +107,7 @@
         </div>
 
         <!--About section-->
-        <div class="Row" id="About">
+        <div class="Row Section_Reveal" id="About">
             <!--Left column-->
             <div class="Column_2">
                 <img src="stylesheet/images/Cyber-Cityscape.jpg" alt="Cities of the Future">
@@ -112,15 +118,68 @@
                 <p>
                     I am an eternal student who is learning how to code! Growing up as an only child, who is Neuro Divergent with ADHD, has led me to get a lot of hobbies from Cooking to Writing with many inbetween.
                     <br>
-                    <br>I am a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s AI Development Boot Camp, I am being trained and gaining experience in the following web and programming languages: HTML, CSS, JavaScript, and more.
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s AI Development Boot Camp, I trained and continue to gain experience in the following web and programming languages: HTML, CSS, JavaScript, and more.
                     <br>
-                    <br>When I am finished I will be a full-stack junior developer and would love the opportunity to learn more and work with you. <a onclick="openForm()" class="contact">Contact</a> me below!
+                    <br>I am a full-stack developer and would love the opportunity to learn more and work with you. <a onclick="openForm()" class="contact">Contact</a> me below!
                 </p>
             </div>
         </div>
 
+        <section id="Projects" class="Section_Reveal">
+            <h1>Projects</h1>
+
+            <div class="Projects_Container">
+                <div class="Project_Card">
+                    <h3>Visual Novel Engine</h3>
+
+                    <div class="Project_Tags">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>Pillow</span>
+                    </div>
+                    
+                    <p>
+                        A Python visual novel framework supporting character portraits,
+                        dialogue systems, and scene transitions.
+                    </p>
+                    
+                    <a href="https://github.com/Bardok380/Visual-Novel-Engine.git">View Code</a>
+                </div>
+
+                <div class="Project_Card">
+                    <h3>Python LEGO Chatbot</h3>
+
+                    <div class="Project_Tags">
+                        <span>Python</span>
+                    </div>
+
+                    <p>
+                        A rule based chatbot capable of recognizing intents, handling
+                        conversation paths, and responding dynamically to user input.
+                    </p>
+                    
+                    <a href="https://github.com/Bardok380/Live-Project.git">View Code</a>
+                </div>
+
+                <div class="Project_Card">
+                    <h3>AI Agent Experiment</h3>
+                    
+                    <div class="Project_Tags">
+                        <span>Python</span>
+                    </div>
+                    
+                    <p>
+                        An experimental autonomous AI system capable of navigating 
+                        environments and adapting behavior using reinforcement learning.
+                    </p>
+                    
+                    <a href="https://github.com/Bardok380/AI.git">View Code</a>
+                </div>
+            </div>
+        </section>
+
         <!--GitHub Section-->
-        <div class="Row" id="GitHub">
+        <div class="Row Section_Reveal" id="GitHub">
             <!--Left Column-->
             <div class="Column_1">
                 <h1>GitHub, Resume, and Linkedin</h1>
